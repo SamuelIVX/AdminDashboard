@@ -1,29 +1,39 @@
+import { updateProduct } from "@/app/lib/actions";
+import { fetchProduct } from "@/app/lib/data";
 import styles from "@/app/ui/dashboard/products/singleProduct/singleProduct.module.css";
 import Image from "next/image";
 
-const SingleProductPage = () => {
+const SingleProductPage = async ({ params }) => {
+  const { id } = params;
+  const product = await fetchProduct(id);
+
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.imgContainer}>
-          <Image src="/noavatar.png" alt="" fill />
+          <Image
+            src={product.img || "/noavatar.png"}
+            alt={product.title}
+            fill
+          />
         </div>
-        iPhone
+        {product.title}
       </div>
       <div className={styles.formContainer}>
-        <form action="" className={styles.form}>
+        <form action={updateProduct} className={styles.form}>
+          <input type="hidden" name="id" value={product.id} />
           <label>Title</label>
-          <input type="text" name="title" placeholder="iPhone 12" />
+          <input type="text" name="title" placeholder={product.title} />
           <label>Price</label>
-          <input type="number" name="price" placeholder="$999.99" />
+          <input type="number" name="price" placeholder={product.price} />
           <label>Stock</label>
-          <input type="number" name="stock" placeholder="54" />
-          <label>Color #</label>
-          <input type="text" name="color" placeholder="blue" />
+          <input type="number" name="stock" placeholder={product.stock} />
+          <label>Color</label>
+          <input type="text" name="color" placeholder={product.color} />
           <label>Size</label>
-          <input type="text" name="size" placeholder="Plus, Pro, Pro Max" />
-          <label>Cat</label>
-          <select name="cat" id="cat">
+          <input type="text" name="size" placeholder={product.size} />
+          <label>Category</label>
+          <select name="cat" id="cat" defaultValue={product.cat}>
             <option value="kitchen">Kitchen</option>
             <option value="computers">Computers</option>
           </select>
@@ -32,8 +42,9 @@ const SingleProductPage = () => {
             name="desc"
             id="desc"
             rows="10"
-            placeholder="description"
+            placeholder={product.desc}
           ></textarea>
+          <button>Update</button>
         </form>
       </div>
     </div>
