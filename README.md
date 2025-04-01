@@ -21,11 +21,11 @@ Most traders lose money because they:
 
 ## 🚀 How to Run This Project Locally
 ## Prerequisites
-Node.js (v18+)
+Next.js (v18+)
 
 ## 1. Setup & Installation
 ### 1. Clone the repository
-git clone [https://github.com/SamuelIVX/ecommerceWebsite]
+git clone [https://github.com/SamuelIVX/AdminDashboard]
 
 cd admindashboard
 
@@ -38,7 +38,7 @@ npm run dev
 Open http://localhost:3000 in your browser.
 
 ## ⚙️ Technology Stack
-Core Framework - [Next.js](https://nextjs.org/) |<b>Hybrid rendering (SSR/SSG), optimized performance, SEO-ready</b>
+Core Framework - [Next.js](https://nextjs.org/) | <b>Hybrid rendering (SSR/SSG), optimized performance, SEO-ready</b>
 
 Database - [MongoDB](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/) | <b>Flexible NoSQL structure, easy data modeling</b>
 
