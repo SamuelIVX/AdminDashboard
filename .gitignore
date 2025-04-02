@@ -1,12 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# .gitignore
-# .jsconfig.config
-# .eslintrc.js
-# .next.config.js
-# .package-lock.json
-# .package.json
-# /public
+.gitignore
+.jsconfig.config
+.eslintrc.js
+.next.config.js
+.package-lock.json
+.package.json
+/public
 
 # dependencies
 /node_modules
