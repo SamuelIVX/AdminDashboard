@@ -1,6 +1,7 @@
 import MenuLink from "./menuLink/menuLink";
 import Image from "next/image";
 import styles from "./sidebar.module.css";
+import { auth } from "@/app/auth";
 
 import {
   MdDashboard,
@@ -114,3 +115,4 @@ const Sidebar = async () => {
 };
 
 export default Sidebar;
+
