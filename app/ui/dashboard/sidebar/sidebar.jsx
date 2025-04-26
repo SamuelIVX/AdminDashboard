@@ -4,8 +4,8 @@ import styles from "./sidebar.module.css";
 import { auth } from "@/app/auth";
 
 import {
-  MdDashboard,
   MdSupervisedUserCircle,
+  MdDashboard,
   MdShoppingBag,
   MdAttachMoney,
   MdWork,
@@ -27,7 +27,7 @@ const menuItems = [
       },
       {
         title: "Users",
-        path: "/dashboard/users",
+        path: "/dashboard/users",         
         icon: <MdSupervisedUserCircle />,
       },
       {
