@@ -1,47 +1,86 @@
-# <b>Full-Stack Admin Dashboard Web Application</b>
+# Admin Dashboard
 
-A <b>seamless</b> and <b>dynamic</b> dashboard that displays analytics about one's company. <b>Easily integratable and production ready!</b>
+**Full-Stack Admin Dashboard Web Application**
 
-## Why This Matters
-Most traders lose money because they:
+> "Manage your business with ease."
 
-✅ Real-time operational visibility
+A modern, production-ready admin dashboard that provides comprehensive management tools for users and products with real-time analytics and insights.
 
-✅ Customizable views for different roles
+## Features
 
-✅ Actionable insights at a glance
+- 📊 **Analytics Dashboard** - Visualize key metrics with charts and cards
+- 👥 **User Management** - Create, view, update, and delete users with role-based access
+- 📦 **Product Management** - Manage products with full CRUD operations
+- 🔍 **Search & Pagination** - Fast client-side search and server-side pagination
+- 🔐 **Authentication** - Secure login system with NextAuth
+- 📈 **Transaction Tracking** - Monitor and view transaction history
+- 🎨 **Modern UI** - Clean, responsive design with custom CSS modules
 
-## This tool solves those problems by:
+## Tech Stack
 
-📊 <b>Visualizing trends</b> (not just raw numbers).
+### Frontend
+- **Next.js 14** - React framework with App Router
+- **React 18** - UI library
+- **CSS Modules** - Component-scoped styling
+- **Recharts** - Data visualization
 
-💡 <b>Showing "what-if"</b> scenarios (e.g., comparing two assets).
+### Backend & Database
+- **Next.js API Routes** - Server-side API endpoints
+- **MongoDB** - NoSQL database
+- **Mongoose** - MongoDB object modeling
 
-🔍 <b>Highlighting hidden costs</b> (fees, taxes, volatility).
+### Authentication
+- **NextAuth v5** - Authentication and session management
+- **bcrypt** - Password hashing
 
-## 🚀 How to Run This Project Locally
 ## Prerequisites
-Next.js (v18+)
 
-## 1. Setup & Installation
-### 1. Clone the repository
-git clone [https://github.com/SamuelIVX/AdminDashboard]
+- Node.js v18 or higher
+- npm or yarn
+- MongoDB database (local or cloud instance)
 
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/SamuelIVX/AdminDashboard.git
 cd admindashboard
+```
 
-## 2. Install dependencies
+### 2. Install Dependencies
+
+```bash
 npm install
+```
 
-## 3. Start the Development Server
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
+```
+
+### 4. Run the Development Server
+
+```bash
 npm run dev
+```
 
-Open http://localhost:3000 in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## ⚙️ Technology Stack
-Core Framework - [Next.js](https://nextjs.org/) | <b>Hybrid rendering (SSR/SSG), optimized performance, SEO-ready</b>
+## Project Structure
 
-Database - [MongoDB](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/) | <b>Flexible NoSQL structure, easy data modeling</b>
-
-Styling - [TailwindCSS](https://tailwindcss.com/) | <b>Rapid UI development, responsive design system</b>
-
-Search & Pagination - Custom Implementations | <b>Blazing-fast client-side filtering, server-side pagination</b>
+```
+app/
+├── dashboard/          # Dashboard pages and routes
+│   ├── products/      # Product management
+│   └── users/         # User management
+├── login/             # Authentication pages
+├── lib/               # Utility functions and data operations
+└── ui/                # React components
+    └── dashboard/     # Dashboard UI components
+```
